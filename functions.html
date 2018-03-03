@@ -1,0 +1,188 @@
+<html>
+<body>  
+<script>
+// Functions in ES6 with different examples! Thats save us some time as campare to the old style
+ // But let  start with old way of function just to sea the difference
+/*
+
+                 let add = function add(){
+                      document.write("Say bye to old Functions");
+                            }
+                     add()
+ 
+*/
+/*   
+Example No 1.. any code withen the currly braces will be excecuted..   
+
+
+                 let add = () => {
+                       document.write("Say hi to Functions");
+                           };
+                       add();
+ 
+ 
+*/
+// Example No 2 .. Now pass withen the  Parentesis a value or something i don't know. 
+/*
+    
+    
+                  let add = (a) => {
+                  return a;
+                        };
+                   document.write(add(3));     
+*/
+    
+    
+// let pass the add function two parameter . The addvantages of functions includes reusing of // date  as an Exp 3 
+  
+// Example 3 
+    
+    
+ /*   
+                  let add = (a,b) =>{
+// take a veriable and set it to whatever we want take of the function parameters 
+                 let c = (a*b)/4;
+                  return c
+                        };  
+                 document.write(add(45,68));   
+                 document.write(add(45,68));  
+                 document.write(add(45,68));   
+                 document.write(add(4,68));  
+*/    
+   
+// After that we understand the concept of JavaScript functions lets come to higher order functions in JavaScript. will be explaind with the helf of example.
+// A higher Order function is a function that takes another function as a parameter.
+    
+//Example number 1: forEach lets take an aray and loop through it using forEach function.
+/*
+
+
+                 let myArray = [1,5,6,8];
+                 myArray.forEach((element)=>{
+                  console.log(element);  
+                  })
+
+ */
+    
+// In the example above the forEach function takes another function and loop through all the elements of the array, the function taken by //forEach funtion is also called the Callback function. It take three parrameter ie Element,Index and the array itself,we can call any of the //parameter . in the example above we just call the parameter element. we can also call the index number of the array elemnet like that.   
+
+    
+/*    
+                  let namesArray = ['Khan', 'Jan','Russel','Curran'];
+                   namesArray.forEach((index,element)=>{
+                  console.log(index,element);
+                    })
+    
+*/
+// we can also pass the array itself as a parameter to the callback function consider the example
+    
+/*
+                 let namesArray = ['khan','Russel','Curran','Jan'];
+                 namesArray.forEach((element,index,namesArray)=>{
+                 console.log(element,index,namesArray);
+                 })
+*/
+    // map are also very populer javaScript functio. it takes aan array and convert it to //another array without efecting the orignal array .... Example
+    
+   /* 
+    let names = ["jawad","khan","jan","sandra","amandra"];
+
+   let changNamesTo = names.map((element)=>{
+   return element.toUpperCase();
+   })
+     console.log(changNamesTo);
+    */
+    /*
+    let numbers = [12,78,5,65,5];
+    let newNumbers = numbers.map((timesThree)=>{
+                                return timesThree*3;
+                                });
+  console.log(newNumbers);
+    console.log(numbers);
+    */
+    
+    //Another famous higher order function is filter()
+    /*
+  let roughNumber = [5,6,8,75,85,-5,-43];
+  let filterNumber= roughNumber.filter((lessThanTen)=>{
+  return lessThanTen>10;
+  });
+  
+  
+  console.log(filterNumber);
+  */
+    
+    
+    // another powerfull higher order function is reduce. it takes four paramater but most commenlly we will use two of them. Accumulater and //cuurent value. consider the example given
+    
+    /*
+    let sum = [1,2,3,4];
+    let result = sum.reduce((a,b)=>{
+        return a+b;
+    });
+  console.log(result);
+  // it returns the value of 10
+  
+  */
+   /*
+   let sum = [1,2,3,4];
+    let result = sum.reduce((a,b)=>{
+        return a+b;  
+        we can return in difference ways like + or - or any other...
+    }2);
+  console.log(result);
+  // it returns the value of 12
+  
+   */
+  /*
+  let myArray = [[0, 1], [2, 3], [4, 5]];
+  
+  
+  let newArray= myArray.reduce((a,b)=>{
+      return a.concat(b);
+  });
+  
+  
+  console.log(newArray);
+ */ 
+  /*
+  
+    let arrays = [[1,2,3],[4,5],[6]];
+  
+    let singleArray = arrays.reduce((a,b)=>{
+        
+       return a.concat(b);
+        
+      });
+  
+    console.log(singleArray);
+// The return Array will be [1,2,3,4,5,6] . Works in the same way as in sum number example
+  
+  */
+    
+   // now lets try to get the average of the elements inside an array. consider the example
+   // in this case it reduce method will take its all four parameters... 
+   
+   /* 
+    
+  let whole =[2,3,6,5,5,78];
+  let average = whole.reduce((ac,ct,ind,ar)=>{
+      ac += ct;
+        if(ind===ar.length-1){
+                             return ac/ar.length;
+                             }
+      else{
+           return ac;
+      }
+  });
+  
+  document.write(average);
+  
+  // The out put of the average array will be 16.somthing
+  
+*/ 
+    </script>
+    </body>
+</html>
+
+   
